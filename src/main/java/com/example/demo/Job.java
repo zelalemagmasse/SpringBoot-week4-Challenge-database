@@ -11,19 +11,19 @@ import javax.validation.constraints.Size;
 public class Job {
 
     @NotNull
-    @Size(min=4)
+    @Size(min=1)
     private String position;
 
 
 
     @NotNull
-    @Size(min=4)
+    @Size(min=1)
     private String company;
     @NotNull
-    @Size(min=4)
+    @Size(min=1)
     private String requirement;
     @NotNull
-    @Size(min=4)
+    @Size(min=1)
     private String desiredSkills;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

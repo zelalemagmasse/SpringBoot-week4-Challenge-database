@@ -1,9 +1,49 @@
 body{
-    background-image: url("/image/workarea.jpg");
+    background-image: url("/image/light.jpg");
     width: 2268px;
     height: 3195px;
 }
 .jumbotron {
 
     background-color: transparent;
+}
+h1{
+    color:blue;
+}
+
+p{
+    color: green;
+}
+
+
+.brightyellow{
+    color:brown;
+}
+
+#special
+{
+    color:purple;
+}
+
+.jumbotron-fluid
+{
+    background: url("/image/light.jpg");
+    background-position:center;
+    color:white;
+}
+
+.jumbotron-fluid h1{
+    font-family: 'Great Vibes', cursive;
+    color:white;
+}
+
+.jumbotron-fluid p{
+    color:cornsilk;
+}
+.bg{
+    background-image: url("/image/sky.jpg");
+}
+
+.bg1{
+    background-image: url("/image/workarea.jpg");
 }

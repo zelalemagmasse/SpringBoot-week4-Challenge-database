@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
 </head>
-<body>
-<a href="/addjob">Add a Job</a><br />
-<table>
-    <tr>
+<body class="bg1">
+<div class="container">
+
+    <h2>List of Job Available</h2>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
         <th>Position</th>
         <th>company</th>
         <th>Requirement</th>
         <td>DesiredSkills</td>
     </tr>
+        </thead>
+        <tbody>
     <tr th:each="jobs : ${jobs}">
         <td th:text="${jobs.position}"></td>
         <td th:text="${jobs.company}"></td>
@@ -23,6 +30,14 @@
 
         </td>
     </tr>
+
+        </tbody>
 </table>
+    <a href="/addjob">Add a Job</a><br />
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
+
