@@ -22,9 +22,7 @@
         <tbody>
     <tr th:each="jobs : ${jobs}">
         <td th:text="${jobs.position}"></td>
-        <td th:text="${jobs.company}"></td>
-        <td th:text="${jobs.requirement}"></td>
-        <td th:text="${jobs.desiredSkills}"></td>
+
         <td>
            <a th:href="@{/detail/{id}(id=${jobs.id})}">Details</a> -
 
