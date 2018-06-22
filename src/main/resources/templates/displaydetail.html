@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8" />
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/newStylesheet.css}">
 </head>
-<body>
+<body class="bg3">
+<div class="container">
+    <h2>Detail about the Job</h2>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Position</th>
+            <th>company</th>
+            <th>Requirement</th>
+            <td>DesiredSkills</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="jobs : ${jobs}">
+            <td th:text="${jobs.position}"></td>
+            <td th:text="${jobs.company}"></td>
+            <td th:text="${jobs.requirement}"></td>
+            <td th:text="${jobs.desiredSkills}"></td>
 
-<a href="/showalljob">Show All Jobs</a><br />
-Postion :<span th:text="${jobs.position}" ></span><br />
-Company :<span th:text="${jobs.company}" ></span><br />
-Requirement :<p th:text="${jobs.desiredSkills}" ></p>
-DesiredSkills :<span th:text="${jobs.desiredSkills}" ></span><br />
+        </tr>
 
+        </tbody>
+    </table>
+    <a href="/showalljob">Show All Jobs</a><br />
+    </div>
 </body>
 </html>
+
