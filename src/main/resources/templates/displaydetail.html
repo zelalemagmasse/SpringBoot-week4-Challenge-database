@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<a href="/showalljob">Show All Jobs</a><br />
+Postion :<span th:text="${jobs.position}" ></span><br />
+Company :<span th:text="${jobs.company}" ></span><br />
+Requirement :<p th:text="${jobs.desiredSkills}" ></p>
+DesiredSkills :<span th:text="${jobs.desiredSkills}" ></span><br />
+
+</body>
+</html>

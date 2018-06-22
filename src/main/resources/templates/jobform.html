@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/update}"
+      th:object="${jobb}"
+      method="post">
+    <input type="hidden" th:field="*{id}" />
+    Position :<input type="text" th:field="*{position}" />
+    <span th:if="${#fields.hasErrors('position')}"
+          th:errors="*{position}"></span><br />
+    Company :<input type="text" th:field="*{company}" />
+    <span th:if="${#fields.hasErrors('company')}"
+          th:errors="*{company}"></span><br />
+    Requirement :<textarea rows="3" th:field="*{requirement}" />
+    <span th:if="${#fields.hasErrors('requirement')}"
+          th:errors="*{requirement}"></span><br />
+    DesiredSkills :<input type="text" th:field="*{desiredSkills}" />
+    <span th:if="${#fields.hasErrors('desiredSkills')}"
+          th:errors="*{desiredSkills}"></span><br />
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+
+
+</body>
+</html>
+

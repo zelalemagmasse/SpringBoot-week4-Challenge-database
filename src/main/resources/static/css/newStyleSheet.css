@@ -1,0 +1,9 @@
+body{
+    background-image: url("/image/workarea.jpg");
+    width: 2268px;
+    height: 3195px;
+}
+.jumbotron {
+
+    background-color: transparent;
+}
