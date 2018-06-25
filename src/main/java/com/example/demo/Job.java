@@ -1,9 +1,6 @@
 package com.example.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -13,14 +10,41 @@ public class Job {
     @NotNull
     @Size(min=1)
     private String position;
+    @NotNull
+    @Size(min=1)
+  //  @OneToOne
+    //private Applicant applicant;
 
 
+//    public Applicant getApplicant() {
+//        return applicant;
+//    }
+
+    public Job(@NotNull @Size(min = 1) String position,  @NotNull @Size(min = 1) String company, @NotNull @Size(min = 1) String requirement, @NotNull @Size(min = 1) String desiredSkills) {
+        this.position = position;
+        //this.applicant = applicant;
+        this.company = company;
+        this.requirement = requirement;
+        this.desiredSkills = desiredSkills;
+    }
+
+//    public void setApplicant(Applicant applicant) {
+//        this.applicant = applicant;
+//    }
 
     @NotNull
+
     @Size(min=1)
     private String company;
+
+
+
+    public Job() {
+    }
+
     @NotNull
     @Size(min=1)
+
     private String requirement;
     @NotNull
     @Size(min=1)

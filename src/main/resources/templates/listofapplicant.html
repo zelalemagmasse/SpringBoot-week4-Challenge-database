@@ -9,30 +9,31 @@
 <body class="bg1">
 <div class="container">
 
-    <h2>List of Job Available</h2>
+    <h2>List of Applicant</h2>
     <table class="table table-bordered">
         <thead>
         <tr>
-        <th>Position</th>
+            <th>Applicant's Name</th>
 
-    </tr>
+        </tr>
         </thead>
         <tbody>
-    <tr th:each="jobs : ${jobs}">
-        <td>
-            <a th:href="@{/detail/{id}(id=${jobs.id})}"><span th:text="${jobs.position}"></span></a>
+        <tr th:each="jobs : ${jobs}">
+            <td th:text="${jobs.applicant.name}"></td>
 
-        </td>
-    </tr>
+            <td>
+                <a th:href="@{/detail/{id}(id=${jobs.id})}">Details</a>
+
+            </td>
+        </tr>
 
         </tbody>
-</table>
+    </table>
     <a href="/addjob">Add a Job</a><br />
-    <a href="/showallapplicant">List of Applicant</a><br />
+
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
-

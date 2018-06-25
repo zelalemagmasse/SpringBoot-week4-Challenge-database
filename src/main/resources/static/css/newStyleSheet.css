@@ -36,17 +36,33 @@ p{
     font-family: 'Great Vibes', cursive;
     color:white;
 }
+.jumbotron{
+    margin-top: 250px;
+    background: rgba(204, 204, 204, 0.5);
+}
 
 .jumbotron-fluid p{
     color:cornsilk;
 }
 .bg{
     background-image: url("/image/sky.jpg");
+
 }
 
 .bg1{
     background-image: url("/image/workarea.jpg");
+
+
+
+
 }
 .bg3{
     background-image: url("/image/myoffice.jpg");
+
+}
+
+.btn-mybutton {
+    color: #000;
+    background-color: #cccccc;
+    border-color: #cccccc;
 }
